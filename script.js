@@ -1,6 +1,12 @@
-// script.js
+document.addEventListener('scroll', function() {
+    const button = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+        button.style.display = 'block';
+    } else {
+        button.style.display = 'none';
+    }
+});
 
-// Exemplo de interação, se necessário no futuro
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Página carregada');
+document.getElementById('backToTop').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });

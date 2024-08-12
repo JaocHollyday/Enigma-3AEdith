@@ -3,84 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumo do Filme: O Jogo da Imitação</title>
+    <title>O Jogo da Imitação</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#resumo">Resumo</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h1>Resumo do Filme: O Jogo da Imitação</h1>
-                <p>Explore a história fascinante de Alan Turing e sua contribuição para a Segunda Guerra Mundial.</p>
-                <a href="#resumo" class="button">Saiba Mais</a>
+    <div class="container">
+        <header>
+            <h1>O Jogo da Imitação</h1>
+        </header>
+        <section class="main-content">
+            <div class="movie-info">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/The_Imitation_Game_poster.jpg/220px-The_Imitation_Game_poster.jpg" alt="O Jogo da Imitação">
+                <h2>Sinopse</h2>
+                <p>O filme conta a história de Alan Turing, um matemático e cientista da computação que ajudou a decifrar os códigos secretos da máquina Enigma durante a Segunda Guerra Mundial.</p>
             </div>
+            <button id="backToTop">Voltar ao Início</button>
         </section>
-
-        <section id="resumo" class="movie-info">
-            <div class="container">
-                <img src="the-imitation-game-poster.jpg" alt="Pôster do Filme O Jogo da Imitação">
-                <h2>Sobre o Filme</h2>
-                <p><strong>Título:</strong> O Jogo da Imitação</p>
-                <p><strong>Diretor:</strong> Morten Tyldum</p>
-                <p><strong>Atores Principais:</strong> Benedict Cumberbatch, Keira Knightley, Matthew Goode</p>
-                <p><strong>Gênero:</strong> Biografia, Drama, Thriller</p>
-                <p><strong>Data de Lançamento:</strong> 2014</p>
-                <p><strong>Sinopse:</strong> 
-                "O Jogo da Imitação" é um drama baseado na vida do matemático Alan Turing, que desempenhou um papel crucial na decodificação dos códigos secretos nazistas durante a Segunda Guerra Mundial. Turing, interpretado por Benedict Cumberbatch, enfrenta diversos desafios enquanto lidera uma equipe em Bletchley Park para quebrar o código Enigma, usado pelos alemães para enviar mensagens codificadas. O filme explora não apenas as complexidades do trabalho de Turing, mas também sua luta pessoal com sua identidade e a discriminação que enfrentou devido à sua orientação sexual. Sua contribuição foi fundamental para encurtar a guerra e salvar inúmeras vidas.</p>
-            </div>
-        </section>
-
-        <section id="contato" class="contact">
-            <div class="container">
-                <h2>Contato</h2>
-                <p>Para mais informações, entre em contato conosco através do e-mail: contato@resumofilmes.com</p>
-            </div>
-        </section>
-        
-        <div class="back-to-top">
-            <a href="#inicio" class="button">Voltar ao Início</a>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                    <img src="images/instagram-icon.png" alt="Instagram">
-                </a>
-                <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                    <img src="images/facebook-icon.png" alt="Facebook">
-                </a>
-                <a href="https://wa.me/5511999999999" target="_blank" class="social-icon">
-                    <img src="images/whatsapp-icon.png" alt="WhatsApp">
-                </a>
-            </div>
-            <p>&copy; 2024 Resumo de Filmes</p>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const backToTopButton = document.querySelector('.back-to-top a');
-            
-            backToTopButton.addEventListener('click', function(event) {
-                event.preventDefault();
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
