@@ -7,8 +7,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background: linear-gradient(to bottom, #000000, #3e2a1f);
+    color: #fff;
 }
 
 header {
@@ -90,6 +90,7 @@ nav ul li a:hover {
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
+    color: #333;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -111,9 +112,28 @@ nav ul li a:hover {
 }
 
 footer {
-    text-align: center;
-    padding: 10px;
     background-color: #333;
     color: #fff;
-    margin-top: 20px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
 }

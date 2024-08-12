@@ -27,19 +27,8 @@
         </section>
 
         <section id="resumo" class="movie-info">
-            <div class="container">!DOCTYPE html>
-                <html lang="pt-BR">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Resumo do Filme: Enigma</title>
-                    <link rel="stylesheet" href="styles.css">
-                </head>
-                <body>
-                    <header>
-                …        </section>
-                
-                <img src="the-imitation-game-poster.jpg" alt="Pôster do Filme O Jogo da Imitação">
+            <div class="container">
+                <img src="images/the-imitation-game-poster.jpg" alt="Pôster do Filme O Jogo da Imitação">
                 <h2>Sobre o Filme</h2>
                 <p><strong>Título:</strong> O Jogo da Imitação</p>
                 <p><strong>Diretor:</strong> Morten Tyldum</p>
@@ -64,7 +53,34 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Resumo de Filmes</p>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <img src="images/instagram-icon.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <img src="images/facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="https://wa.me/5511999999999" target="_blank" class="social-icon">
+                    <img src="images/whatsapp-icon.png" alt="WhatsApp">
+                </a>
+            </div>
+            <p>&copy; 2024 Resumo de Filmes</p>
+        </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.querySelector('.back-to-top a');
+            
+            backToTopButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
