@@ -44,6 +44,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Estilos da seção Hero */
 .hero {
     background: url('images/the-imitation-game-background.jpg') no-repeat center center/cover;
     color: #fff;
@@ -60,15 +61,17 @@ nav ul li a:hover {
 }
 
 .hero h1 {
-    font-size: 3em;
+    font-size: 4em;
+    font-weight: bold;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 
+/* Botão */
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -78,39 +81,67 @@ nav ul li a:hover {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .button:hover {
     background-color: #0056b3;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
+/* Seção Movie Info */
+.movie-info {
+    background-color: #f4f4f4;
     color: #333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.movie-info h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.movie-info p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
 }
 
 .movie-info img {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.contact {
-    background-color: #f9f9f9;
-    padding: 20px 0;
-}
-
-.back-to-top {
-    text-align: center;
     margin: 20px 0;
 }
 
+/* Seção de Contato */
+.contact {
+    background-color: #e2e2e2;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+}
+
+/* Botão Voltar ao Topo */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+.back-to-top.show {
+    display: block;
+}
+
+/* Rodapé */
 footer {
     background-color: #333;
     color: #fff;
@@ -122,6 +153,11 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.footer-content p {
+    font-size: 1em;
+    margin-top: 10px;
 }
 
 .social-links {
