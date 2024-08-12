@@ -46,7 +46,7 @@ nav ul li a:hover {
 
 /* Estilos da seção Hero */
 .hero {
-    background: url('images/the-imitation-game-background.jpg') no-repeat center center/cover;
+    background: url('the-imitation-game-background.jpg') no-repeat center center/cover;
     color: #fff;
     height: 100vh;
     display: flex;
