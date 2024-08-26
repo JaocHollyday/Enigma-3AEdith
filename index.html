@@ -27,15 +27,6 @@
                 <img src="imagem1.jpg" alt="Descrição da Imagem 1">
             </a>
         </div>
-        <div class="gallery-item">
-            <a href="imagem2.jpg" class="lightbox">
-                <img src="imagem2.jpg" alt="Descrição da Imagem 2">
-            </a>
-        </div>
-        <div class="gallery-item">
-            <a href="video1.mp4" class="lightbox" data-type="video">
-                <img src="video-thumbnail1.jpg" alt="Descrição do Vídeo 1">
-            </a>
         </div>
         <div class="gallery-item">
             <a href="https://www.youtube.com/embed/GxokSkSqF5E" class="lightbox" data-type="iframe">
@@ -43,9 +34,11 @@
             </a>
         </div>
         <div class="gallery-item">
-            <a href="URL_DO_SITE_DESTINO" target="_blank">
-                <img src="https://i0.wp.com/bhdicas.uai.com.br/wp-content/uploads/sites/23/2018/03/o-jogo.jpeg?resize=950%2C534&ssl=1" alt="O Jogo da Imitação" class="gallery-image">
-            </a>
+            <div class="video-link-container">
+                <a href="https://www.youtube.com/watch?v=EXEMPLO" target="_blank">
+                    <img src="video-thumbnail2.jpg" alt="Thumbnail do Vídeo">
+                </a>
+            </div>
         </div>
         <!-- Adicione mais itens conforme necessário -->
     </div>
@@ -55,11 +48,11 @@
         <span class="close">&times;</span>
         <div class="lightbox-content">
             <img id="lightbox-img" src="" alt="">
-            <video id="lightbox-video" controls>
+            <video id="lightbox-video" controls style="display: none;">
                 <source src="" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
-            <iframe id="lightbox-iframe" src="" frameborder="0" allowfullscreen></iframe>
+            <iframe id="lightbox-iframe" src="" frameborder="0" allowfullscreen style="display: none;"></iframe>
         </div>
     </div>
     

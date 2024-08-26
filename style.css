@@ -1,27 +1,37 @@
-/* style.css */
-
-/* Estilos Gerais */
+/* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* Header */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-h1 {
-    margin: 0;
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    color: #2c3e50;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* Conteúdo Principal */
+/* Seção principal */
 .main-content {
-    padding: 20px;
+    margin-bottom: 30px;
 }
 
 .movie-info {
@@ -29,51 +39,59 @@ h1 {
 }
 
 .movie-info img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .movie-info h2 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.8em;
+    color: #34495e;
     margin-top: 20px;
 }
 
-/* Botão Voltar ao Início */
-#backToTop {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #333;
+.movie-info p {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #7f8c8d;
+}
+
+/* Botão "Voltar ao Início" */
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
     color: #fff;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
     border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    text-align: center;
-    line-height: 50px;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
-#backToTop:hover {
-    background-color: #555;
+button:hover {
+    background: linear-gradient(135deg, #2980b9, #7d3f7d);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilos da Galeria */
+/* Galeria */
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
-    justify-content: center;
+    gap: 15px;
 }
 
 .gallery-item {
-    flex: 1 1 200px;
+    flex: 1 1 calc(33.333% - 15px);
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -81,12 +99,31 @@ h1 {
     width: 100%;
     height: auto;
     display: block;
-    cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
 }
 
 .gallery-item img:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Contêiner do link de vídeo */
+.video-link-container {
+    position: relative;
+    display: inline-block;
+}
+
+.video-link-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-link-container a {
+    display: block;
 }
 
 /* Lightbox Modal */
@@ -98,33 +135,39 @@ h1 {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
 }
 
 .lightbox-content {
     position: relative;
-    max-width: 80%;
+    max-width: 90%;
     max-height: 80%;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .lightbox-content img,
 .lightbox-content video,
 .lightbox-content iframe {
-    width: 100%;
-    height: auto;
-}
-
-iframe {
-    height: 500px; /* Ajuste a altura conforme necessário */
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
 }
 
 .close {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 36px;
+    font-size: 30px;
     color: #fff;
     cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #e74c3c;
 }
