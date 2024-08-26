@@ -20,7 +20,36 @@
             <button id="backToTop">Voltar ao Início</button>
         </section>
     </div>
-    
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="imagem1.jpg" class="lightbox">
+                <img src="imagem1.jpg" alt="Descrição da Imagem 1">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="imagem2.jpg" class="lightbox">
+                <img src="imagem2.jpg" alt="Descrição da Imagem 2">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="video1.mp4" class="lightbox" data-type="video">
+                <img src="video-thumbnail1.jpg" alt="Descrição do Vídeo 1">
+            </a>
+        </div>
+        <!-- Adicione mais itens conforme necessário -->
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="close">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <video id="lightbox-video" controls>
+                <source src="" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
