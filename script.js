@@ -1,10 +1,11 @@
-// scripts.js
+// script.js
 
-// Função para a galeria
+// Função para a galeria e lightbox
 document.addEventListener('DOMContentLoaded', function () {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxVideo = document.getElementById('lightbox-video');
+    const lightboxIframe = document.getElementById('lightbox-iframe');
     const closeBtn = document.querySelector('.close');
 
     document.querySelectorAll('.lightbox').forEach(item => {
@@ -17,10 +18,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 lightboxVideo.src = href;
                 lightboxVideo.style.display = 'block';
                 lightboxImg.style.display = 'none';
+                lightboxIframe.style.display = 'none';
+            } else if (type === 'iframe') {
+                lightboxIframe.src = href;
+                lightboxIframe.style.display = 'block';
+                lightboxImg.style.display = 'none';
+                lightboxVideo.style.display = 'none';
             } else {
                 lightboxImg.src = href;
                 lightboxImg.style.display = 'block';
                 lightboxVideo.style.display = 'none';
+                lightboxIframe.style.display = 'none';
             }
 
             lightbox.style.display = 'flex';
@@ -31,7 +39,9 @@ document.addEventListener('DOMContentLoaded', function () {
         lightbox.style.display = 'none';
         lightboxImg.src = '';
         lightboxVideo.src = '';
+        lightboxIframe.src = '';
         lightboxVideo.style.display = 'none';
+        lightboxIframe.style.display = 'none';
     });
 
     lightbox.addEventListener('click', function (e) {
@@ -39,12 +49,14 @@ document.addEventListener('DOMContentLoaded', function () {
             lightbox.style.display = 'none';
             lightboxImg.src = '';
             lightboxVideo.src = '';
+            lightboxIframe.src = '';
             lightboxVideo.style.display = 'none';
+            lightboxIframe.style.display = 'none';
         }
     });
 });
 
-// Função para o botão Voltar ao Topo
+// Função para o botão Voltar ao Início
 document.addEventListener('scroll', function() {
     const button = document.getElementById('backToTop');
     if (window.scrollY > 300) {

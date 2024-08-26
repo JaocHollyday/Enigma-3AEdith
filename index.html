@@ -20,6 +20,7 @@
             <button id="backToTop">Voltar ao Início</button>
         </section>
     </div>
+
     <div class="gallery">
         <div class="gallery-item">
             <a href="imagem1.jpg" class="lightbox">
@@ -36,6 +37,11 @@
                 <img src="video-thumbnail1.jpg" alt="Descrição do Vídeo 1">
             </a>
         </div>
+        <div class="gallery-item">
+            <a href="https://www.youtube.com/embed/GxokSkSqF5E" class="lightbox" data-type="iframe">
+                <img src="youtube-thumbnail.jpg" alt="Vídeo do YouTube">
+            </a>
+        </div>
         <!-- Adicione mais itens conforme necessário -->
     </div>
 
@@ -48,8 +54,10 @@
                 <source src="" type="video/mp4">
                 Seu navegador não suporta o elemento de vídeo.
             </video>
+            <iframe id="lightbox-iframe" src="" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

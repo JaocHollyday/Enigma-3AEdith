@@ -1,75 +1,69 @@
-/* Estilos Globais */
+/* style.css */
+
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: #9e3535;
-    color: #6e0b0b;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Header */
 header {
-    text-align: center;
-    background: #222;
+    background-color: #333;
     color: #fff;
-    padding: 20px 0;
-    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
 }
 
-header h1 {
+h1 {
     margin: 0;
 }
 
+/* Conteúdo Principal */
 .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    padding: 20px;
 }
 
 .movie-info {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .movie-info img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .movie-info h2 {
-    color: #555;
+    margin-top: 20px;
 }
 
-button#backToTop {
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+/* Botão Voltar ao Início */
+#backToTop {
+    display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
-button#backToTop:hover {
-    background: #555;
+#backToTop:hover {
+    background-color: #555;
 }
 
-/* styles.css */
-
+/* Estilos da Galeria */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -116,9 +110,14 @@ button#backToTop:hover {
 }
 
 .lightbox-content img,
-.lightbox-content video {
+.lightbox-content video,
+.lightbox-content iframe {
     width: 100%;
     height: auto;
+}
+
+iframe {
+    height: 500px; /* Ajuste a altura conforme necessário */
 }
 
 .close {
@@ -129,4 +128,3 @@ button#backToTop:hover {
     color: #fff;
     cursor: pointer;
 }
-
